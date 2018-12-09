@@ -1,0 +1,23 @@
+<div class="col-11">
+<mat-card class="example-card">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>{{headline}}</mat-card-title>
+  </mat-card-header>
+  <img mat-card-image src={{imageUrl}} alt="Photo of a Shiba Inu">
+  <mat-card-content>
+    <p>
+      {{description}}
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <span class="col-2"><mat-icon>thumb_up</mat-icon></span>
+
+    <span class="col-2"><mat-icon>share</mat-icon></span>
+    <a href={{url}}>View Full story</a>
+    <button (click)="openFull()">Full story</button>
+  </mat-card-actions>
+</mat-card>
+
+
+</div>

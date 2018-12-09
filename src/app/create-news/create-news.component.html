@@ -1,0 +1,70 @@
+
+<div class="row">
+  <div class="col s8 offset-s2">
+    <div class="card">
+      <div class="sm-jumbotron center-align">
+        <h2>Insert News</h2>
+      </div>
+      <form class="col s12 white" #EditorSignUp="ngForm">
+
+        <div class="row">
+          <div class="input field col s12">
+            <input matInput type="text" name="Title" [(ngModel)]="title">
+            <label>Title</label>
+          </div>
+
+        </div>
+
+        <div class="row">
+          <div class="input field col s12">
+            <input matInput type="text" matInput name="ImageUrl" [(ngModel)]="imgUrl">
+            <label>Image Url</label>
+          </div>
+
+        </div>
+
+        <div class="row">
+          <div class="input field col s12">
+            <textarea id="textarea1" class="materialize-textarea" matInput name="Description"
+                      [(ngModel)]="desc"></textarea>
+            <label for="textarea1">Description</label>
+            <!--<textarea matInput name="Description" [(ngModel)]="desc">-->
+            <!--<label>Description</label>-->
+            <!--</textarea>-->
+          </div>
+
+
+        </div>
+
+        <div class="row">
+          <div class="input field col s12">
+            <input matInput type="text" matInput name="NewsUrl" [(ngModel)]="newsUrl">
+            <label>News Document Url</label>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input field col s12">
+            <textarea rows="4" id="storyArea" class="materialize-textarea" matInput name="FullStory"
+                      [(ngModel)]="story"></textarea>
+            <label for="storyArea">FullStory</label>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input field col s12">
+            <select rows="4" id="storyArea" class="materialize-textarea" matInput name="FullStory"
+                      [(ngModel)]="story"></select>
+            <label for="storyArea">FullStory</label>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input field col s12">
+            <button class="btn-submit" (click)="onSubmit()" type="submit">Submit</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
