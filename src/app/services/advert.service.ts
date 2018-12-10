@@ -9,7 +9,7 @@ export class AdvertService {
 
     createAdvert(advert) {
         console.log(advert);
-        fetch('http://localhost:8080/api/advertisement', {
+        fetch('http://localhost:8080/api/advert/insert', {
             credentials: 'include',
             method: 'POST',
             body: JSON.stringify(advert),
