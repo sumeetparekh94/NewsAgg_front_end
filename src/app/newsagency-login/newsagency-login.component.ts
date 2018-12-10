@@ -1,15 +1,14 @@
-import { Component, OnInit } from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { first } from 'rxjs/operators';
+import {Component, OnInit} from '@angular/core';
+import {Router, ActivatedRoute} from '@angular/router';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {first} from 'rxjs/operators';
 import {LoginService} from '../services/login.service';
 
 
-
 @Component({
-  selector: 'app-newsagency-login',
-  templateUrl: './newsagency-login.component.html',
-  styleUrls: ['./newsagency-login.component.css']
+    selector: 'app-newsagency-login',
+    templateUrl: './newsagency-login.component.html',
+    styleUrls: ['./newsagency-login.component.css']
 })
 export class NewsagencyLoginComponent implements OnInit {
     loginForm: FormGroup;
@@ -42,7 +41,9 @@ export class NewsagencyLoginComponent implements OnInit {
     }
 
     // convenience getter for easy access to form fields
-    get f() { return this.loginForm.controls; }
+    get f() {
+        return this.loginForm.controls;
+    }
 
     onSubmit() {
         this.submitted = true;
@@ -56,14 +57,15 @@ export class NewsagencyLoginComponent implements OnInit {
         console.log(this.f.username.value);
         console.log(this.f.password.value);
         this.loginService.checkAgency(this.f.username.value, this.f.password.value).then(xyz => {
-            console.log(xyz)
+            console.log(xyz);
             if (xyz[0] === 'true') {
-                console.log('hello from the other side')
+                console.log('hello from the other side');
                 localStorage.setItem('currentUser', this.f.username.value);
-                this.router.navigate(['/agency']);
+                this.router.navigate(['/agency/panel']);
             } else {
 
                 alert('wrong creds');
+
             }
         }).catch(err => {
             console.log(err);
