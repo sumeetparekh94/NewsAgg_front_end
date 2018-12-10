@@ -52,6 +52,7 @@ import { AdvertCardComponent } from './advert-card/advert-card.component';
 import { UpdateAdvertComponent } from './update-advert/update-advert.component';
 import { AdvertiserPanelComponent } from './advertiser-panel/advertiser-panel.component';
 import { AgencyPanelComponent } from './agency-panel/agency-panel.component';
+import { AgencyLoginComponent } from './agency-login/agency-login.component';
 
 
 @NgModule({
@@ -86,7 +87,8 @@ import { AgencyPanelComponent } from './agency-panel/agency-panel.component';
     AdvertCardComponent,
     UpdateAdvertComponent,
     AdvertiserPanelComponent,
-    AgencyPanelComponent
+    AgencyPanelComponent,
+    AgencyLoginComponent
   ],
   imports: [
     BrowserModule,

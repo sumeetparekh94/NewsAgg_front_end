@@ -4,6 +4,7 @@ import {NewsHome} from '../newsHome';
 import {MatDialog, MatDialogConfig} from '@angular/material';
 import {UpdateNewsComponent} from '../update-news/update-news.component';
 import {AdminService} from '../services/admin.service';
+import {CreateNewsComponent} from '../create-news/create-news.component';
 
 @Component({
     selector: 'app-agency',
@@ -56,4 +57,25 @@ export class AgencyComponent implements OnInit {
     }
 
 
+    createNews() {
+        const dialogConfig = new MatDialogConfig();
+        dialogConfig.disableClose = true;
+        dialogConfig.autoFocus = true;
+        dialogConfig.data = {
+            id: 1,
+            title: 'Login Here'
+        };
+        dialogConfig.height = 500;
+        dialogConfig.width = 800;
+
+        const dialogRef = this.dialog.open(CreateNewsComponent, dialogConfig);
+        dialogRef.afterClosed().subscribe(result => {
+            console.log('Dialog was closed');
+            console.log(result);
+        });
+    }
+
+    createStory() {
+
+    }
 }
