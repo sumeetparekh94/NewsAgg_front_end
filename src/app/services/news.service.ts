@@ -19,7 +19,7 @@ export class NewsService {
 
 
     getTopEnter() {
-        return fetch('https://serene-harbor-64038.herokuapp.com/entertainmenthome', {
+        return fetch('https://serene-harbor-64038.herokuapp.com/api/entertainmenthome', {
             credentials: 'include'
         }).then(msg => {
             console.log(msg);

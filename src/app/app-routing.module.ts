@@ -23,6 +23,7 @@ import {UpdateAdvertComponent} from './update-advert/update-advert.component';
 import {AgencyComponent} from './agency/agency.component';
 import {AgencyPanelComponent} from './agency-panel/agency-panel.component';
 import {AdvertiserPanelComponent} from './advertiser-panel/advertiser-panel.component';
+import {AgencyListComponent} from './agency-list/agency-list.component';
 
 
 const routes: Routes = [
@@ -30,7 +31,7 @@ const routes: Routes = [
     {path: 'home', component: HomeComponent},
     {path: 'agency/panel', component: AgencyPanelComponent},
     {path: 'advertiser/panel', component: AdvertiserPanelComponent},
-
+    {path: 'agency/all', component: AgencyListComponent},
     {path: 'register', component: RegistrationComponent},
     {path: 'login', component: LoginComponent},
     {path: 'agency', component: AgencyComponent},
@@ -53,6 +54,7 @@ const routes: Routes = [
     {path: 'admin/userManagement', component: UserManagementComponent},
     {path: '**', component: HomeComponent},
     {path: 'register', component: RegistrationComponent},
+
 ];
 
 @NgModule({

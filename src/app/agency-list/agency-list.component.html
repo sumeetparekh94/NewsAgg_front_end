@@ -1,3 +1,13 @@
-<p>
-  agency-list works!
-</p>
+<app-header></app-header>
+<div class="container-fluid" style="margin-top: 100px">
+<div *ngFor="let agency of agencyList" class="row">
+  <div class="col-4">{{agency.id}}</div>
+  <div class="col-4">{{agency.username}}</div>
+  <div class="col-4">
+    <button class="mat-raised-button" *ngIf="checkFollow(agency.id)" (click)="unfollow(agency.id)">UnFollow</button>
+    <button class="mat-raised-button" *ngIf="!checkFollow(agency.id)">Follow</button>
+
+  </div>
+
+</div>
+</div>
