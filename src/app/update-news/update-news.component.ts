@@ -49,6 +49,7 @@ export class UpdateNewsComponent implements OnInit {
         this.newsHome.story = this.story;
         this.newsHome.source = localStorage.getItem("currentUser")
         this.newsService.updateNews(this.newsHome);
+        window.location.reload()
 
     }
 

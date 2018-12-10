@@ -37,8 +37,8 @@ export class AgencyComponent implements OnInit {
             id: newsId,
             title: 'Login Here'
         };
-        dialogConfig.height = 500;
-        dialogConfig.width = 800;
+        dialogConfig.height = 900;
+        dialogConfig.width = 900;
         console.log(newsId)
         const dialogRef = this.dialog.open(UpdateNewsComponent, dialogConfig);
         dialogRef.afterClosed().subscribe(result => {
