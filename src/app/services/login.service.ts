@@ -8,7 +8,7 @@ export class LoginService {
     checkLogin(username, password) {
         console.log(username);
         console.log(username, password);
-        return fetch('http://localhost:8080/api/login?username=' + username + '&password=' + password, {
+        return fetch('https://serene-harbor-64038.herokuapp.com/api/login?username=' + username + '&password=' + password, {
             credentials: 'include'
         }).then(msg => {
 
@@ -21,7 +21,7 @@ export class LoginService {
     checkAdmin(username, password) {
         console.log(username);
         console.log(username, password);
-        return fetch('http://localhost:8080/api/admin/login?username=' + username + '&password=' + password, {
+        return fetch('https://serene-harbor-64038.herokuapp.com/api/admin/login?username=' + username + '&password=' + password, {
             credentials: 'include',
 
         }).then(msg => {
@@ -36,7 +36,7 @@ export class LoginService {
 
     checkAgency(username, password) {
         console.log(username, password);
-        return fetch('http://localhost:8080/api/agency/login?username=' + username + '&password=' + password, {
+        return fetch('https://serene-harbor-64038.herokuapp.com/api/agency/login?username=' + username + '&password=' + password, {
             credentials: 'include',
         }).then(msg => {
             return msg.json();
@@ -48,7 +48,7 @@ export class LoginService {
 
     checkAdvert(username, password) {
         console.log(username, password);
-        return fetch('http://localhost:8080/api/advert/login?username=' + username + '&password=' + password, {
+        return fetch('https://serene-harbor-64038.herokuapp.com/api/advert/login?username=' + username + '&password=' + password, {
             credentials: 'include',
         }).then(msg => {
             return msg.json();

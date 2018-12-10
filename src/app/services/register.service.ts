@@ -8,7 +8,7 @@ export class RegisterService {
 
     insertUser(user) {
 
-        return fetch('http://localhost:8080/api/registration', {
+        return fetch('https://serene-harbor-64038.herokuapp.com/api/registration', {
             credentials: 'include',
             method: 'POST',
             body: JSON.stringify(user),

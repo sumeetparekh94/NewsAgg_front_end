@@ -10,7 +10,7 @@ export class MyfeedService {
         console.log('hea')
         console.log(userId);
 
-        return fetch('http://localhost:8080/api/myfeed?username=' + userId, {
+        return fetch('https://serene-harbor-64038.herokuapp.com/api/myfeed?username=' + userId, {
         credentials: 'include'
     }).
         then(msg => {

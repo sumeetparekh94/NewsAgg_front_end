@@ -5,7 +5,7 @@ export class SportsService {
 
     constructor() { }
     getTopSports() {
-        return fetch('http://localhost:8080/api/sportshome', {
+        return fetch('https://serene-harbor-64038.herokuapp.com/api/sportshome', {
             credentials: 'include'
         }).then(msg => {
             console.log(msg);

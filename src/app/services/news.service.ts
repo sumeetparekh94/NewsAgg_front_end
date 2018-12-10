@@ -7,7 +7,7 @@ export class NewsService {
     }
 
     getTopNews() {
-        return fetch('http://localhost:8080/api/newshome', {
+        return fetch('https://serene-harbor-64038.herokuapp.com/api/newshome', {
             credentials: 'include'
         }).then(msg => {
             console.log(msg);
@@ -19,7 +19,7 @@ export class NewsService {
 
 
     getTopEnter() {
-        return fetch('http://localhost:8080/api/entertainmenthome', {
+        return fetch('https://serene-harbor-64038.herokuapp.com/entertainmenthome', {
             credentials: 'include'
         }).then(msg => {
             console.log(msg);
@@ -30,7 +30,7 @@ export class NewsService {
     }
 
     getTopScience() {
-        return fetch('http://localhost:8080/api/sciencehome', {
+        return fetch('https://serene-harbor-64038.herokuapp.com/api/sciencehome', {
             credentials: 'include'
         }).then(msg => {
             console.log(msg);
@@ -42,7 +42,7 @@ export class NewsService {
 
     insertNews(newsStory) {
         console.log(newsStory);
-        fetch('http://localhost:8080/api/news/insert', {
+        fetch('https://serene-harbor-64038.herokuapp.com/api/news/insert', {
             credentials: 'include',
             method: 'POST',
             body: JSON.stringify(newsStory),
@@ -61,7 +61,7 @@ export class NewsService {
 
     updateNews(newsHome) {
 
-        fetch('http://localhost:8080/api/news/update', {
+        fetch('https://serene-harbor-64038.herokuapp.com/api/news/update', {
             credentials: 'include',
             method: 'POST',
             body: JSON.stringify(newsHome),
@@ -75,7 +75,7 @@ export class NewsService {
     }
 
     findOne(newsId) {
-        return fetch('http://localhost:8080/api/news/findone?id=' + newsId, {
+        return fetch('https://serene-harbor-64038.herokuapp.com/api/news/findone?id=' + newsId, {
             credentials: 'include'
         }).then((msg) => {
             return msg.json();
@@ -86,7 +86,7 @@ export class NewsService {
     }
 
     findByNewsAgency(newsId) {
-        return fetch('http://localhost:8080/api/agency/findByAgency?username=' + newsId, {
+        return fetch('https://serene-harbor-64038.herokuapp.com/api/agency/findByAgency?username=' + newsId, {
             credentials: 'include'
         }).then((msg) => {
             return msg.json();

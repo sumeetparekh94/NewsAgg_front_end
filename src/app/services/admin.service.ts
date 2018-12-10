@@ -7,7 +7,7 @@ export class AdminService {
 
 
     findallnews() {
-        return fetch('http://localhost:8080/api/newshome', {
+        return fetch('https://serene-harbor-64038.herokuapp.com/api/newshome', {
             credentials: 'include'
         }).then((msg) => {
             return msg.json();
@@ -18,7 +18,7 @@ export class AdminService {
 
     getAllUsers() {
 
-        return fetch('http://localhost:8080/api/findallusers', {
+        return fetch('https://serene-harbor-64038.herokuapp.com/api/findallusers', {
             credentials: 'include'
         }).then(msg => {
             return msg.json();
@@ -29,7 +29,7 @@ export class AdminService {
 
     deleteUser(userId) {
 
-        return fetch('http://localhost:8080/api/deleteuser?id=' + userId, {
+        return fetch('https://serene-harbor-64038.herokuapp.com/api/deleteuser?id=' + userId, {
             credentials: 'include'
         }).then(msg => {
             return msg.json();
@@ -40,7 +40,7 @@ export class AdminService {
 
 
     deleteNews(newsId) {
-        return fetch('http://localhost:8080/api/deleteNews/' + newsId, {
+        return fetch('https://serene-harbor-64038.herokuapp.com/api/deleteNews/' + newsId, {
             credentials: 'include',
             method: 'DELETE'
         }).then(msg => {

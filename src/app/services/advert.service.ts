@@ -9,7 +9,7 @@ export class AdvertService {
 
     createAdvert(advert) {
         console.log(advert);
-        fetch('http://localhost:8080/api/advert/insert', {
+        fetch('https://serene-harbor-64038.herokuapp.com/api/advert/insert', {
             credentials: 'include',
             method: 'POST',
             body: JSON.stringify(advert),
@@ -24,7 +24,7 @@ export class AdvertService {
     }
 
     findall() {
-        return fetch('http://localhost:8080/api/advert/find', {
+        return fetch('https://serene-harbor-64038.herokuapp.com/api/advert/find', {
             credentials: 'include'
         }).then(msg => {
             return msg.json();
@@ -34,7 +34,7 @@ export class AdvertService {
     }
 
     findOne(adId) {
-        return fetch('http://localhost:8080/api/advert/findOne?id=' + adId, {
+        return fetch('https://serene-harbor-64038.herokuapp.com/api/advert/findOne?id=' + adId, {
             credentials: 'include'
         }).then((res) => {
             return res.json();
@@ -45,7 +45,7 @@ export class AdvertService {
 
     update(advert: Advertisement) {
         console.log(advert)
-        fetch('http://localhost:8080/api/advert/update', {
+        fetch('https://serene-harbor-64038.herokuapp.com/api/advert/update', {
             credentials: 'include',
             method: 'POST',
             body: JSON.stringify(advert),
@@ -62,7 +62,7 @@ export class AdvertService {
 
 
     findByadvertiser(username) {
-        return fetch('http://localhost:8080/api/advert/findByAdvertiser?username=' + username, {
+        return fetch('https://serene-harbor-64038.herokuapp.com/api/advert/findByAdvertiser?username=' + username, {
             credentials: 'include'
         }).then(msg => {
             return msg.json();

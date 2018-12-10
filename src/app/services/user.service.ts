@@ -8,7 +8,7 @@ export class UserService {
     }
 
     findOneUser(username) {
-        return fetch('http://localhost:8080/api/user/findOne?username=' + username, {
+        return fetch('https://serene-harbor-64038.herokuapp.com/api/user/findOne?username=' + username, {
             credentials: 'include'
 
         }).then(msg => {
@@ -29,7 +29,7 @@ export class UserService {
         this.us.password = user.password;
         this.us.preference = user.preference;
         this.us.dType = user.dType;
-       fetch('http://localhost:8080/api/user/updateUser', {
+       fetch('https://serene-harbor-64038.herokuapp.com/api/user/updateUser', {
             credentials: 'include',
             method: 'POST',
             body: JSON.stringify(this.us),
@@ -47,7 +47,7 @@ export class UserService {
     }
 
     insertContact(contact) {
-        fetch('http://localhost:8080/api/contact/insert', {
+        fetch('https://serene-harbor-64038.herokuapp.com/api/contact/insert', {
             credentials: 'include',
             method: 'POST',
             body: JSON.stringify(contact),
