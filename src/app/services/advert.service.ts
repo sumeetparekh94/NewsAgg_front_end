@@ -44,6 +44,7 @@ export class AdvertService {
     }
 
     update(advert: Advertisement) {
+        console.log(advert)
         fetch('http://localhost:8080/api/advert/update', {
             credentials: 'include',
             method: 'POST',
@@ -57,5 +58,16 @@ export class AdvertService {
         }).catch(() => {
         });
 
+    }
+
+
+    findByadvertiser(username) {
+        return fetch('http://localhost:8080/api/advert/findByAdvertiser?username=' + username, {
+            credentials: 'include'
+        }).then(msg => {
+            return msg.json();
+        }).catch(() => {
+
+        });
     }
 }
