@@ -1,16 +1,19 @@
-<div class="col-2" style="position: fixed">
-  <ul class="list-group">
-    <a  routerLink="/myfeed" ><li *ngIf="isLoggedIn" class="list-group-item">
-      Myfeed
-    </li></a>
-   <li class="list-group-item"> <a [routerLink]= "['/sports']" >Sports</a></li>
-    <li class="list-group-item">Entertainment</li>
-    <li class="list-group-item">Science</li>
-    <li class="list-group-item">Health</li>
-    <li class="list-group-item">Technology</li>
-    <li class="list-group-item" >Sports</li>
+<div class="collection">
+    <ul class="list-group">
+        <li  *ngIf="isLoggedIn" class="list-group-item">
+            <a routerLink="/myfeed" routerLinkActive="active">
+                Myfeed</a>
+        </li>
+        <li class="list-group-item ">
+            <a routerLink="/sports" >Sports</a>
+        </li>
+        <li class="list-group-item">Entertainment</li>
+        <li class="list-group-item">Science</li>
+        <li class="list-group-item">Health</li>
+        <li class="list-group-item">Technology</li>
+        <li class="list-group-item">Sports</li>
 
-  </ul>
+    </ul>
 
 
 </div>

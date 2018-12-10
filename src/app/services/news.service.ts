@@ -41,7 +41,7 @@ export class NewsService {
     }
 
     insertNews(newsStory) {
-        console.log(newsStory)
+        console.log(newsStory);
         fetch('http://localhost:8080/api/news/insert', {
             credentials: 'include',
             method: 'POST',
@@ -61,14 +61,14 @@ export class NewsService {
 
     updateNews(newsHome) {
 
-        fetch('http://localhost:8080/api/news/update',{
-            credentials : 'include',
+        fetch('http://localhost:8080/api/news/update', {
+            credentials: 'include',
             method: 'POST',
             body: JSON.stringify(newsHome),
             headers: {
                 'content-type': 'application/json'
             }
-        }).then(()=>{
+        }).then(() => {
 
         });
 
@@ -76,6 +76,17 @@ export class NewsService {
 
     findOne(newsId) {
         return fetch('http://localhost:8080/api/news/findone?id=' + newsId, {
+            credentials: 'include'
+        }).then((msg) => {
+            return msg.json();
+        }).catch(error => {
+            console.log(error);
+        });
+
+    }
+
+    findByNewsAgency(newsId) {
+        return fetch('http://localhost:8080/api/agency/findByAgency?username=' + newsId, {
             credentials: 'include'
         }).then((msg) => {
             return msg.json();

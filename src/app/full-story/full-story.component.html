@@ -1,21 +1,24 @@
 <app-header></app-header>
-  <div class="col-3"><app-sidebar></app-sidebar></div>
-  <div class="col-9">
+<div style="margin-bottom: 20px">aaaaa</div>
+<!--<div class="col-2">-->
+<!--<app-sidebar></app-sidebar>-->
+<!--</div>-->
+<div class="col-9" style="float: right">
     <div class="row">
-<div id="headlineSpace" class="col-8">
-      <h4 matInput type="text" name="Headline">{{headline}}</h4>
+        <div id="headlineSpace" class="col-8">
+            <h4 matInput type="text" name="Headline">{{headline}}</h4>
+        </div>
     </div>
-  </div>
 
-<div class="row">
+    <div class="row">
 
-  <div id="imgSpace" class="col-8">
-    <img src="{{image_url}}" alt="image" style="max-width: 100%" name = "Image" >
-  </div>
-</div>
-  <div class="row">
-  <div id="storySpace" class="col-8">
-    <p matInput type="text" name="FullStory">{{fullStory}}</p>
-  </div>
-</div>
+        <div id="imgSpace" class="col-8">
+            <img src="{{image_url}}" alt="image" style="max-width: 100%" name="Image">
+        </div>
+    </div>
+    <div class="row">
+        <div id="storySpace" class="col-8">
+            <p matInput type="text" name="FullStory">{{fullStory}}</p>
+        </div>
+    </div>
 </div>

@@ -48,6 +48,9 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { AdvertiserLoginComponent } from './advertiser-login/advertiser-login.component';
 import { CreateAdvertComponent } from './create-advert/create-advert.component';
 import {AdvertService} from './services/advert.service';
+import { AdvertCardComponent } from './advert-card/advert-card.component';
+import { UpdateAdvertComponent } from './update-advert/update-advert.component';
+import { AdvertiserPanelComponent } from './advertiser-panel/advertiser-panel.component';
 
 
 @NgModule({
@@ -78,7 +81,10 @@ import {AdvertService} from './services/advert.service';
     AgencyComponent,
     ContactUsComponent,
     AdvertiserLoginComponent,
-    CreateAdvertComponent
+    CreateAdvertComponent,
+    AdvertCardComponent,
+    UpdateAdvertComponent,
+    AdvertiserPanelComponent
   ],
   imports: [
     BrowserModule,

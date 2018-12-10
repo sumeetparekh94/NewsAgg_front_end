@@ -43,7 +43,10 @@ export class LoginComponent {
         }).catch(err => {
             console.log(err);
         });
-    }}
+    }
+
+
+}
 
 
 

@@ -1,20 +1,40 @@
 /* You can add global styles to this file, and also import other style files */
-div.sm-jumbotron{
+div.sm-jumbotron {
     margin: 0px;
-    padding: 2rem;
-    background-color: #38547b;
+    background-color: #FB7D19;
     color: #fff;
+    height: 100px;
 }
-button.btn-submit{
+
+button.btn-submit {
     background-color: #38547b;
     color: #fff;
     width: 100%;
 }
-button.btn-submit:focus,button.btn-submit:hover{
+
+button.btn-submit:focus, button.btn-submit:hover {
     background-color: #38547b;
 }
 
-div.validation-error{
+div.validation-error {
     color: red;
 }
+
+li {
+    margin-left: 20px;
+
+}
+
+#gen {
+    margin-left: 0px;
+}
+
+#pref {
+    margin-bottom: 20px;
+}
+
+.btn-submit{
+    padding:20px;
+}
+
 

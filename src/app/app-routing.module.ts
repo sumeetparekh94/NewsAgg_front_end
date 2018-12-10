@@ -19,6 +19,8 @@ import {FullStoryComponent} from './full-story/full-story.component';
 import {ContactUsComponent} from './contact-us/contact-us.component';
 import {AdvertiserLoginComponent} from './advertiser-login/advertiser-login.component';
 import {CreateAdvertComponent} from './create-advert/create-advert.component';
+import {UpdateAdvertComponent} from './update-advert/update-advert.component';
+import {AgencyComponent} from './agency/agency.component';
 
 
 const routes: Routes = [
@@ -26,8 +28,10 @@ const routes: Routes = [
     {path: 'home', component: HomeComponent},
     {path: 'register', component: RegistrationComponent},
     {path: 'login', component: LoginComponent},
+    {path: 'agency', component: AgencyComponent},
     {path: 'user/myfeed', component: MyfeedComponent},
     {path: 'advertiser/create', component: CreateAdvertComponent},
+    {path: 'advert/update', component: UpdateAdvertComponent},
     {path: 'sports', component: SportsComponent},
     {path: 'science', component: ScienceComponent},
     {path: 'advertiser/login', component: AdvertiserLoginComponent},
