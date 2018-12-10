@@ -10,11 +10,11 @@ import {MAT_DIALOG_DATA} from '@angular/material';
 })
 export class UpdateAdvertComponent implements OnInit {
 
-    private id: number;
-    private title: string;
-    private full_link: string;
-    private image_url: string;
-    private advert: Advertisement;
+     id: number;
+     title: string;
+     full_link: string;
+     image_url: string;
+     advert: Advertisement;
 
     constructor(private advertService: AdvertService, @Inject(MAT_DIALOG_DATA) public data) {
         this.advert = new Advertisement();

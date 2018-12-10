@@ -9,8 +9,8 @@ import {count} from 'rxjs/operators';
 })
 export class SportsComponent implements OnInit {
 
-    private newsList: Response | void;
-    private count: number;
+     newsList: Response | void;
+     count: number;
 
     constructor(private sportsService: SportsService) { }
 

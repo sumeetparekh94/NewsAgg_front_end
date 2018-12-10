@@ -8,10 +8,10 @@ import {NewsService} from '../services/news.service';
     styleUrls: ['./full-story.component.css']
 })
 export class FullStoryComponent implements OnInit {
-    private id: number;
-    private headline: string;
-    private fullStory: string;
-    private image_url: string;
+     id: number;
+     headline: string;
+     fullStory: string;
+     image_url: string;
 
     constructor(private route: ActivatedRoute, private newsService: NewsService) {
         this.route.queryParams

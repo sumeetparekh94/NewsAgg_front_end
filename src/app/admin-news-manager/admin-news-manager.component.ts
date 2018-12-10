@@ -12,7 +12,7 @@ import {UpdateNewsComponent} from '../update-news/update-news.component';
 })
 export class AdminNewsManagerComponent implements OnInit {
 
-    private newsList: Response | void;
+     newsList: Response | void;
 
 
     constructor(private adminService: AdminService, public dialog: MatDialog) {

@@ -10,8 +10,8 @@ import {NewsService} from '../services/news.service';
 })
 export class EntertainmentComponent implements OnInit {
 
-    private newsList: Response | void;
-    private count: number;
+     newsList: Response | void;
+     count: number;
 
     constructor(private newsService: NewsService) { }
 

@@ -9,27 +9,27 @@ import {User} from '../User';
 })
 export class RegistrationComponent implements OnInit {
 
-    private username: string;
-    private email: string;
-    private firstname: string;
-    private lastname: string;
-    private password: string;
-    private preferences: string;
-    private isGen: boolean;
-    private isHea: boolean;
-    private pref: string;
-    private isSpo: boolean;
-    private isSci: boolean;
+     username: string;
+     email: string;
+     firstname: string;
+     lastname: string;
+     password: string;
+     preferences: string;
+     isGen: boolean;
+     isHea: boolean;
+     pref: string;
+     isSpo: boolean;
+     isSci: boolean;
 
-    private isBus: boolean;
+     isBus: boolean;
 
-    private isEnt: boolean;
+     isEnt: boolean;
 
-    private isTec: boolean;
+     isTec: boolean;
 
-    private generalBox: boolean;
+     generalBox: boolean;
 
-    private us: User = new User();
+     us: User = new User();
 
 
     constructor(private registerService: RegisterService) {

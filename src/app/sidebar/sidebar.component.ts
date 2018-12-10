@@ -5,8 +5,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sidebar.component.css']
 })
 export class SidebarComponent implements OnInit {
-  private isLoggedIn: boolean;
-  private currentUser: string;
+   isLoggedIn: boolean;
+   currentUser: string;
   constructor() {
     this.isLoggedIn = localStorage.hasOwnProperty('currentUser');
     this.currentUser = localStorage.getItem('currentUser');

@@ -10,7 +10,7 @@ import {constructDependencies} from '@angular/core/src/di/reflective_provider';
 export class UserManagementComponent implements OnInit {
 
 
-      private userList: Response | void;
+       userList: Response | void;
 
     constructor(private adminService: AdminService) { }
 

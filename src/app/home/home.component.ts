@@ -13,9 +13,9 @@ import {AdvertService} from '../services/advert.service';
 })
 export class HomeComponent implements OnInit {
 
-    private newsList: Response | void;
-    private count: number;
-    private adverts: Response | void;
+     newsList: Response | void;
+     count: number;
+     adverts: Response | void;
     constructor(private newsService: NewsService, private advertService: AdvertService) {
     }
 

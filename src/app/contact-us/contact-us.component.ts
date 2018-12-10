@@ -9,10 +9,10 @@ import {UserService} from '../services/user.service';
     styleUrls: ['./contact-us.component.css']
 })
 export class ContactUsComponent implements OnInit {
-    private contact: Contact;
-    private message: string;
-    private name: string;
-    private email: string;
+     contact: Contact;
+     message: string;
+     name: string;
+     email: string;
 
     constructor(private userService: UserService) {
     }

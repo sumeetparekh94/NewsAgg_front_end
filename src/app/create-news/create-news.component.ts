@@ -8,13 +8,13 @@ import {NewsService} from '../services/news.service';
     styleUrls: ['./create-news.component.css']
 })
 export class CreateNewsComponent implements OnInit {
-    private title: string;
-    private imgUrl: string;
-    private desc: string;
-    private newsUrl: string;
-    private story: string;
-    private newsHome: NewsHome;
-    private source: string;
+     title: string;
+     imgUrl: string;
+     desc: string;
+     newsUrl: string;
+     story: string;
+     newsHome: NewsHome;
+     source: string;
     constructor(private newsService: NewsService) {
     }
 

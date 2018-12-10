@@ -10,10 +10,10 @@ import {AdvertService} from '../services/advert.service';
 export class CreateAdvertComponent implements OnInit {
 
 
-    private title: string;
-    private image_url: string;
-    private full_link: string;
-    private ad: Advertisement;
+     title: string;
+     image_url: string;
+     full_link: string;
+     ad: Advertisement;
 
     constructor(private advertService: AdvertService) {
     }

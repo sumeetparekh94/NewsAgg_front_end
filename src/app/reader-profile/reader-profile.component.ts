@@ -9,24 +9,24 @@ import {User} from '../User';
 })
 export class ReaderProfileComponent implements OnInit {
 
-    private username: string;
-    private email: string;
-    private firstname: string;
-    private lastname: string;
-    private password: string;
-    private pref: string;
-    private isGen: boolean;
-    private isHea: boolean;
-    private isSpo: boolean;
-    private isSci: boolean;
+     username: string;
+     email: string;
+     firstname: string;
+     lastname: string;
+     password: string;
+     pref: string;
+     isGen: boolean;
+     isHea: boolean;
+     isSpo: boolean;
+     isSci: boolean;
 
-    private isBus: boolean;
+     isBus: boolean;
 
-    private isEnt: boolean;
+     isEnt: boolean;
 
-    private isTec: boolean;
-    private user: User;
-    private prefs: string;
+     isTec: boolean;
+     user: User;
+     prefs: string;
 
     constructor(private userService: UserService) {
     }

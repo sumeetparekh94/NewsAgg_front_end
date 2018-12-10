@@ -13,8 +13,8 @@ import {CreateNewsComponent} from '../create-news/create-news.component';
 })
 export class AgencyComponent implements OnInit {
 
-    private newsList: Response | void;
-    private newsHome: NewsHome;
+     newsList: Response | void;
+     newsHome: NewsHome;
 
     constructor(private newsService: NewsService, public dialog: MatDialog, private adminService: AdminService) {
         this.newsHome = new NewsHome();

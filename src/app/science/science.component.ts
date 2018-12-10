@@ -9,8 +9,8 @@ import {NewsService} from '../services/news.service';
 })
 export class ScienceComponent implements OnInit {
 
-    private newsList: Response | void;
-    private count: number;
+     newsList: Response | void;
+     count: number;
 
     constructor(private newsService: NewsService) { }
 

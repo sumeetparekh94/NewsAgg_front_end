@@ -10,14 +10,14 @@ import {MAT_DIALOG_DATA} from '@angular/material';
 })
 export class UpdateNewsComponent implements OnInit {
 
-    private title: string;
-    private desc: string;
-    private imgUrl: string;
-    private newsUrl: string;
-    private story: string;
-    private newsHome: NewsHome;
+     title: string;
+     desc: string;
+     imgUrl: string;
+     newsUrl: string;
+     story: string;
+     newsHome: NewsHome;
 
-    private id: number;
+     id: number;
 
     constructor(private newsService: NewsService, @Inject(MAT_DIALOG_DATA) public data) {
             this.id = this.data.id;

@@ -7,9 +7,9 @@ import {MyfeedService} from '../services/myfeed.service';
   styleUrls: ['./myfeed.component.css']
 })
 export class MyfeedComponent implements OnInit {
-  private currentUser: string;
-    private newsList: Response | void;
-    private count: number;
+   currentUser: string;
+     newsList: Response | void;
+     count: number;
   constructor(    private myfeedService: MyfeedService) {
     this.currentUser = localStorage.getItem('currentUser');
   }
