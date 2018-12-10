@@ -14,7 +14,7 @@ import {CreateAdvertComponent} from '../create-advert/create-advert.component';
 export class AdvertiserPanelComponent implements OnInit {
 
     advertisement: Response | void;
-    private  di
+
 
     constructor(private adServie: AdvertService, public dialog: MatDialog) {
     }
@@ -26,7 +26,8 @@ export class AdvertiserPanelComponent implements OnInit {
 
         });
     }
-    updateAd(adId){
+
+    updateAd(adId) {
         const dialogConfig = new MatDialogConfig();
         dialogConfig.disableClose = true;
         dialogConfig.autoFocus = true;
@@ -34,7 +35,7 @@ export class AdvertiserPanelComponent implements OnInit {
             id: adId,
             title: 'Login Here'
         };
-        dialogConfig.height= 500;
+        dialogConfig.height = 500;
         dialogConfig.width = 800;
 
         const dialogRef = this.dialog.open(UpdateAdvertComponent, dialogConfig);
@@ -52,12 +53,10 @@ export class AdvertiserPanelComponent implements OnInit {
         dialogConfig.data = {
             title: 'Login Here'
         };
-        dialogConfig.height= 500;
+        dialogConfig.height = 500;
         dialogConfig.width = 800;
 
         const dialogRef = this.dialog.open(CreateAdvertComponent, dialogConfig);
-        dialogRef.afterClosed().subscribe(result => {
-            console.log('Dialog was closed');
 
     }
 }

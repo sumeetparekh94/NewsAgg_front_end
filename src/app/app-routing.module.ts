@@ -49,7 +49,7 @@ const routes: Routes = [
     {path: 'contactUs', component: ContactUsComponent},
     {path: 'entertainment', component: EntertainmentComponent},
     {path: 'admin', component: AdminComponent},
-    {path: 'adminLogin', component: AdminLoginComponent},
+    {path: 'admin/login', component: AdminLoginComponent},
     {path: 'admin/userManagement', component: UserManagementComponent},
     {path: '**', component: HomeComponent},
     {path: 'register', component: RegistrationComponent},

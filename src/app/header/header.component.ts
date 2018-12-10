@@ -3,6 +3,7 @@ import {MatDialog, MatDialogConfig} from '@angular/material';
 import {LoginComponent} from '../login/login.component';
 import {ReaderProfileComponent} from '../reader-profile/reader-profile.component';
 import {RegistrationComponent} from '../registration/registration.component';
+import {Router} from '@angular/router';
 
 @Component({
     selector: 'app-header',
@@ -13,8 +14,9 @@ export class HeaderComponent implements OnInit {
 
     public isLoggedIn: boolean;
     public currUser: string;
+    private router: Router;
 
-    constructor(public dialog: MatDialog) {
+    constructor(public dialog: MatDialog, private router: Router) {
         this.isLoggedIn = localStorage.hasOwnProperty('currentUser');
         this.currUser = localStorage.getItem('currentUser');
     }
@@ -27,7 +29,7 @@ export class HeaderComponent implements OnInit {
         this.isLoggedIn = false;
         this.currUser = '';
         localStorage.removeItem('currentUser');
-        window.location.reload();
+        this.router.navigate('/home');
     }
 
     openModal() {

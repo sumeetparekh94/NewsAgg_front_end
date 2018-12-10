@@ -27,6 +27,7 @@ export class CreateAdvertComponent implements OnInit {
         this.ad.full_link = this.full_link;
         this.ad.image_url = this.image_url;
         this.ad.title = this.title;
+        this.ad.source = localStorage.getItem('currentUser')
         this.advertService.createAdvert(this.ad);
 
     }
