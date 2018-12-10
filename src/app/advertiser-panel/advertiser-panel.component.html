@@ -1,22 +1,37 @@
 <app-header></app-header>
-<h2>Your advertisements</h2>
-<button class="mat-raised-button" (click)="createAd()">Create New Advertisement</button>
-<div class="row">
-  <div class="col-3">Title</div>
-  <div class="col-3">Image_url</div>
-  <div class="col-3">Full_Link</div>
-  <div class="col-3">Actions</div>
+<div class="row" style="margin: 6em -18em 0em 14em;">
 
-</div>
+    <div class="col-6">
+        <h2>Your advertisements</h2>
+        <button class="mat-raised-button" style="margin: 20px; margin-left: 0px" (click)="createAd()">Create New
+            Advertisement
+        </button>
+        <div class="row">
+            <div class="col-3">Title</div>
+            <div class="col-3">Image_url</div>
+            <div class="col-3">Full_Link</div>
+            <div class="col-3">Actions</div>
 
-<div *ngFor="let ad of advertisement" class="row">
-  <div class="col-3">{{ad.title}}</div>
-  <div class="col-3">{{ad.img_url}}</div>
-  <div class="col-3">{{ad.full_link}}</div>
-  <div class="col-3">
-    <button class="mat-raised-button" (click)="updateAd(ad.id)">Update</button>
-    <button class="mat-raised-button" (click)="deleteAd(ad.id)">Delete</button>
+        </div>
 
-  </div>
+        <div *ngFor="let ad of advertisement" class="row">
 
+            <div class="card" style="height: 100%; width:100%; padding: 20px; margin-bottom: 20px">
+
+                <div class="col-3">{{ad.title}}</div>
+                <div class="col-3">{{ad.img_url}}</div>
+                <div class="col-3">{{ad.full_link}}</div>
+                <div class="col-3">
+                    <div class="col-sm-6">
+                        <button class="mat-raised-button" (click)="updateAd(ad.id)">Update</button>
+                    </div>
+                    <div class="col-sm-6">
+                        <button class="mat-raised-button" (click)="deleteAd(ad.id)">Delete</button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
 </div>
