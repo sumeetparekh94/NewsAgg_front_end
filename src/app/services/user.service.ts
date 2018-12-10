@@ -98,4 +98,13 @@ export class UserService {
         }).catch(() => {
         });
     }
+
+    follow(id, agencyId) {
+        return fetch('https://serene-harbor-64038.herokuapp.com/api/user/follow?username=' + id + '&agency_id=' + agencyId, {
+            credentials: 'include',
+
+        }).then(() => {
+        }).catch(() => {
+        });
+    }
 }

@@ -5,7 +5,7 @@
   <div class="col-4">{{agency.username}}</div>
   <div class="col-4">
     <button class="mat-raised-button" *ngIf="checkFollow(agency.id)" (click)="unfollow(agency.id)">UnFollow</button>
-    <button class="mat-raised-button" *ngIf="!checkFollow(agency.id)">Follow</button>
+    <button class="mat-raised-button" *ngIf="!checkFollow(agency.id)" (click)="follow(agency.id)">Follow</button>
 
   </div>
 

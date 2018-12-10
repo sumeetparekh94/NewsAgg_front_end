@@ -58,12 +58,17 @@ export class AgencyListComponent implements OnInit {
 
     unfollow(agencyId) {
 
-        this.userService.unfollow(localStorage.getItem('currentUser'), agencyId).then(()=>{
+        this.userService.unfollow(localStorage.getItem('currentUser'), agencyId).then(() => {
             window.location.reload();
 
         });
     }
 
-    follow(agencyId)
+    follow(agencyId) {
+        this.userService.follow(localStorage.getItem('currentUser'), agencyId).then(() => {
+            window.location.reload();
+
+        });
+    }
 
 }
