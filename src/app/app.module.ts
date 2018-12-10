@@ -54,6 +54,8 @@ import { AdvertiserPanelComponent } from './advertiser-panel/advertiser-panel.co
 import { AgencyPanelComponent } from './agency-panel/agency-panel.component';
 import { AgencyLoginComponent } from './agency-login/agency-login.component';
 import { AddAgencyComponent } from './add-agency/add-agency.component';
+import { AgencyProfileComponent } from './agency-profile/agency-profile.component';
+import { AgencyListComponent } from './agency-list/agency-list.component';
 
 
 @NgModule({
@@ -90,7 +92,9 @@ import { AddAgencyComponent } from './add-agency/add-agency.component';
     AdvertiserPanelComponent,
     AgencyPanelComponent,
     AgencyLoginComponent,
-    AddAgencyComponent
+    AddAgencyComponent,
+    AgencyProfileComponent,
+    AgencyListComponent
   ],
   imports: [
     BrowserModule,
