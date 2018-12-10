@@ -52,7 +52,8 @@ export class AdminNewsManagerComponent implements OnInit {
             console.log(result);
         });
     }
-    updateNews(newsId){
+
+    updateNews(newsId) {
         const dialogConfig = new MatDialogConfig();
         dialogConfig.disableClose = true;
         dialogConfig.autoFocus = true;
@@ -60,7 +61,7 @@ export class AdminNewsManagerComponent implements OnInit {
             id: newsId,
             title: 'Login Here'
         };
-        dialogConfig.height= 500;
+        dialogConfig.height = 500;
         dialogConfig.width = 800;
 
         const dialogRef = this.dialog.open(UpdateNewsComponent, dialogConfig);
