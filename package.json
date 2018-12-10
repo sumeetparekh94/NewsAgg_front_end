@@ -3,11 +3,13 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "start": "node server.js",
+    "postinstall": "ng build --aot --prod",
+    "heroku-postbuild": "ng build --prod"
   },
   "dependencies": {
     "@angular-devkit/build-angular": "~0.10.0",
@@ -48,5 +50,10 @@
     "typescript": "~3.1.6",
     "zone.js": "~0.8.26"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "engines": {
+    "node": "8.11.1",
+    "npm": "6.0.1"
+  }
+
 }
