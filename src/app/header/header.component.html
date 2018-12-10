@@ -10,6 +10,9 @@
         <li class="nav-item active">
           <a style="color: white" class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
         </li>
+        <li class="nav-item active">
+          <a routerLink="/admin/login" style="color: white" class="nav-link"> Admin Login</a>
+        </li>
         <li class="nav-item">
           <a style="color: white" class="nav-link" routerLink="/contactUs">Contact Us</a>
         </li>
@@ -24,9 +27,7 @@
             <a class="dropdown-item" href="#">Something else here</a>
           </div>
         </li>
-        <li class="nav-item">
-          <a style="color: white" class="nav-link disabled" href="#">Disabled</a>
-        </li>
+
       </ul>
       <button mat-raised-button style="margin-right: 10px" *ngIf="!isLoggedIn" (click)="openModal()">Login</button>
       <button mat-raised-button *ngIf="isLoggedIn" (click)="logout()">Logout</button>

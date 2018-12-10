@@ -7,13 +7,23 @@ export class MyfeedService {
     }
 
     getMyFeed(userId) {
-        console.log('hea')
+        console.log('hea');
         console.log(userId);
 
         return fetch('https://serene-harbor-64038.herokuapp.com/api/myfeed?username=' + userId, {
-        credentials: 'include'
-    }).
-        then(msg => {
+            credentials: 'include'
+        }).then(msg => {
+            console.log(msg);
+            return msg.json();
+        }).catch(err => {
+            console.log(err);
+        });
+    }
+
+    getUserAgencyData(userId) {
+        return fetch('https://serene-harbor-64038.herokuapp.com/api/agencyfeed?username=' + userId, {
+            credentials: 'include'
+        }).then(msg => {
             console.log(msg);
             return msg.json();
         }).catch(err => {

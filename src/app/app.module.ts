@@ -56,6 +56,8 @@ import { AgencyLoginComponent } from './agency-login/agency-login.component';
 import { AddAgencyComponent } from './add-agency/add-agency.component';
 import { AgencyProfileComponent } from './agency-profile/agency-profile.component';
 import { AgencyListComponent } from './agency-list/agency-list.component';
+import { UserSubscriptionComponent } from './user-subscription/user-subscription.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
@@ -94,7 +96,9 @@ import { AgencyListComponent } from './agency-list/agency-list.component';
     AgencyLoginComponent,
     AddAgencyComponent,
     AgencyProfileComponent,
-    AgencyListComponent
+    AgencyListComponent,
+    UserSubscriptionComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
