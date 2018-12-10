@@ -1,6 +1,7 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Inject, OnInit} from '@angular/core';
 import {AdvertService} from '../services/advert.service';
 import {Advertisement} from '../Advertisement';
+import {MAT_DIALOG_DATA} from '@angular/material';
 
 @Component({
     selector: 'app-update-advert',
@@ -9,19 +10,20 @@ import {Advertisement} from '../Advertisement';
 })
 export class UpdateAdvertComponent implements OnInit {
 
-
+    private id: number;
     private title: string;
     private full_link: string;
     private image_url: string;
     private advert: Advertisement;
 
-    constructor(private advertService: AdvertService) {
+    constructor(private advertService: AdvertService, @Inject(MAT_DIALOG_DATA) public data) {
         this.advert = new Advertisement();
+        this.id = data.id;
     }
 
 
     ngOnInit() {
-        this.advertService.findOne(2).then((res) => {
+        this.advertService.findOne(this.id).then((res) => {
             this.title = res.title;
             this.full_link = res.full_link;
             this.image_url = res.img_url;
@@ -32,13 +34,13 @@ export class UpdateAdvertComponent implements OnInit {
     }
 
     onSubmit() {
-        this.advert.id = 2;
+        this.advert.id = this.id;
         this.advert.title = this.title;
         this.advert.image_url = this.image_url;
         this.advert.full_link = this.full_link;
         this.advert.source = localStorage.getItem('currentUser');
         this.advertService.update(this.advert);
-
+        window.location.reload();
     }
 
 }

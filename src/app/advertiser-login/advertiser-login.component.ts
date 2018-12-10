@@ -62,7 +62,7 @@ export class AdvertiserLoginComponent implements OnInit {
             if (xyz[0] === 'true') {
                 console.log('hello from the other side')
                 localStorage.setItem('currentUser', this.f.username.value);
-                this.router.navigate(['/agency']);
+                this.router.navigate(['/advertiser/panel']);
             } else {
 
                 alert('wrong creds');

@@ -22,12 +22,15 @@ import {CreateAdvertComponent} from './create-advert/create-advert.component';
 import {UpdateAdvertComponent} from './update-advert/update-advert.component';
 import {AgencyComponent} from './agency/agency.component';
 import {AgencyPanelComponent} from './agency-panel/agency-panel.component';
+import {AdvertiserPanelComponent} from './advertiser-panel/advertiser-panel.component';
 
 
 const routes: Routes = [
     {path: '', redirectTo: 'home', pathMatch: 'full'},
     {path: 'home', component: HomeComponent},
     {path: 'agency/panel', component: AgencyPanelComponent},
+    {path: 'advertiser/panel', component: AdvertiserPanelComponent},
+
     {path: 'register', component: RegistrationComponent},
     {path: 'login', component: LoginComponent},
     {path: 'agency', component: AgencyComponent},
