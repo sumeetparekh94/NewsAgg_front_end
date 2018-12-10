@@ -16,7 +16,9 @@ export class UserManagementComponent implements OnInit {
 
   ngOnInit() {
        this.adminService.getAllUsers().then((response) => {
+
             this.userList = response;
+            console.log(response);
        });
   }
   deleteUser(userId) {

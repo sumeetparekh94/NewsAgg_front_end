@@ -14,7 +14,6 @@ export class HeaderComponent implements OnInit {
 
     public isLoggedIn: boolean;
     public currUser: string;
-    private router: Router;
 
     constructor(public dialog: MatDialog, private router: Router) {
         this.isLoggedIn = localStorage.hasOwnProperty('currentUser');
@@ -29,7 +28,7 @@ export class HeaderComponent implements OnInit {
         this.isLoggedIn = false;
         this.currUser = '';
         localStorage.removeItem('currentUser');
-        this.router.navigate('/home');
+        this.router.navigate(['/home']);
     }
 
     openModal() {

@@ -1,23 +1,41 @@
-
 <app-header></app-header>
-<div class="row">
-  <div class="col-3">Source link</div>
-  <div class="col-3">Summary</div>
-  <div class="col-3">Headline</div>
-  <div class="col-3">Action</div>
+<div class="row" style="margin: 5em -72em 4em 4em;">
+
+    <div class="col-6" style="overflow-wrap: break-word;">
+        <button class="mat-raised-button" style="margin: 20px; margin-left: 0px" (click)="createStory()">Create A new
+            Story
+        </button>
+
+        <div class="row">
+            <div class="col-3">Source link</div>
+            <div class="col-3">Summary</div>
+            <div class="col-3">Headline</div>
+            <div class="col-3">Action</div>
+
+        </div>
+
+        <div *ngFor="let news of newsList" class="row">
+
+            <div class="card" style="height: 100%; width:100%; padding: 20px; margin-bottom: 20px">
+                <div class="row">
+
+                    <div class="col-3">{{news.source_link}}</div>
+                    <div class="col-3">{{news.summary}}</div>
+                    <div class="col-3">{{news.headline}}</div>
+                    <div class="col-3">
+                        <div class="row">
+                            <div class="col sm6">
+                                <button class="mat-raised-button" (click)="deleteNews(news.id)">Delete</button>
+                            </div>
+                            <div class="col sm6">
+                                <button class="mat-raised-button" (click)="updateNews(news.id)">Update</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
 
 </div>
-
-<div *ngFor="let news of newsList" class="row">
-  <div class="col-3">{{news.source_link}}</div>
-  <div class="col-3">{{news.summary}}</div>
-  <div class="col-3">{{news.headline}}</div>
-  <div class="col-3">
-    <div class="col-6"><button class="mat-raised-button" (click)="deleteNews(news.id)">Delete</button></div>
-    <div class="col-6"><button class="mat-raised-button" (click)="updateNews(news.id)">Update</button></div>
-  </div>
-</div>
-
-
-
-<button class="mat-raised-button" (click)="createStory()">Create A new Story</button>

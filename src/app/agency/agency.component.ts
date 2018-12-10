@@ -40,7 +40,7 @@ export class AgencyComponent implements OnInit {
         };
         dialogConfig.height = 900;
         dialogConfig.width = 900;
-        console.log(newsId)
+        console.log(newsId);
         const dialogRef = this.dialog.open(UpdateNewsComponent, dialogConfig);
         dialogRef.afterClosed().subscribe(result => {
             console.log('Dialog was closed');
