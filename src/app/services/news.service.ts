@@ -17,6 +17,16 @@ export class NewsService {
         });
     }
 
+    getTopBusiness() {
+        return fetch('https://serene-harbor-64038.herokuapp.com/api/businesshome', {
+            credentials: 'include'
+        }).then(msg => {
+            console.log(msg);
+            return msg.json();
+        }).catch(err => {
+            console.log(err);
+        });
+    }
 
     getTopEnter() {
         return fetch('https://serene-harbor-64038.herokuapp.com/api/entertainmenthome', {

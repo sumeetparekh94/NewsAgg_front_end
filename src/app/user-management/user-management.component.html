@@ -4,7 +4,14 @@
     <div class="col-4">
       <app-admin-sidebar></app-admin-sidebar>
     </div>
+
+
+
     <div class="col-8">
+      <div class="row">
+        <button class="mat-raised-button" (click)="">Create a new User</button>
+      </div>
+
       <div *ngFor="let user of userList">
 
         {{user.id}}
@@ -13,6 +20,8 @@
         {{user.email}}
         {{user.preference}}
         <button (click)="deleteUser(user.id)">Delete</button>
+        <button (click)="updateUser(user.id)">Update</button>
+
       </div>
     </div>
   </div>

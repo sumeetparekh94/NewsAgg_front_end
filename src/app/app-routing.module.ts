@@ -24,6 +24,7 @@ import {AgencyComponent} from './agency/agency.component';
 import {AgencyPanelComponent} from './agency-panel/agency-panel.component';
 import {AdvertiserPanelComponent} from './advertiser-panel/advertiser-panel.component';
 import {AgencyListComponent} from './agency-list/agency-list.component';
+import {CreateUserComponent} from './create-user/create-user.component';
 
 
 const routes: Routes = [
@@ -36,6 +37,7 @@ const routes: Routes = [
     {path: 'login', component: LoginComponent},
     {path: 'agency', component: AgencyComponent},
     {path: 'user/myfeed', component: MyfeedComponent},
+    {path: 'admin/create/user', component: CreateUserComponent},
     {path: 'advertiser/create', component: CreateAdvertComponent},
     {path: 'advert/update', component: UpdateAdvertComponent},
     {path: 'sports', component: SportsComponent},

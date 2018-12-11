@@ -1,0 +1,49 @@
+<div class="row">
+  <div class="col s8 offset-s2">
+    <div class="card">
+      <div class="sm-jumbotron center-align">
+        <h2>Create User by filling out form</h2>
+      </div>
+      <form class="col s12 white" #Advertiser="ngForm">
+
+        <div class="row">
+          <div class="input field col s12">
+            <input matInput type="text" name="Title" [(ngModel)]="username">
+            <label>Username</label>
+          </div>
+
+        </div>
+
+        <div class="row">
+          <div class="input field col s12">
+            <input matInput type="text" matInput name="ImageUrl" [(ngModel)]="password">
+            <label>Password</label>
+          </div>
+
+        </div>
+
+
+        <div class="row">
+          <div class="input field col s12">
+            <input matInput type="text" matInput name="FullLink" [(ngModel)]="firstname">
+            <label>First Name</label>
+          </div>
+        </div>
+
+
+        <div class="row">
+          <div class="input field col s12">
+            <input matInput type="text" matInput name="FullLink" [(ngModel)]="email">
+            <label>Email</label>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input field col s12">
+            <button class="btn-submit" (click)="onSubmit()" type="submit">Submit</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

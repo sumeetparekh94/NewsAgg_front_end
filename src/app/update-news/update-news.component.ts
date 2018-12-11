@@ -10,24 +10,24 @@ import {MAT_DIALOG_DATA} from '@angular/material';
 })
 export class UpdateNewsComponent implements OnInit {
 
-     title: string;
-     desc: string;
-     imgUrl: string;
-     newsUrl: string;
-     story: string;
-     newsHome: NewsHome;
+    title: string;
+    desc: string;
+    imgUrl: string;
+    newsUrl: string;
+    story: string;
+    newsHome: NewsHome;
 
-     id: number;
+    id: number;
 
     constructor(private newsService: NewsService, @Inject(MAT_DIALOG_DATA) public data) {
-            this.id = this.data.id;
+        this.id = this.data.id;
     }
 
     ngOnInit() {
         this.newsHome = new NewsHome();
         this.newsService.findOne(this.id).then((res) => {
 
-            console.log(res)
+            console.log(res);
             this.title = res.headline;
             this.story = res.story;
             this.desc = res.summary;
@@ -47,7 +47,7 @@ export class UpdateNewsComponent implements OnInit {
         this.newsHome.imgUrl = this.imgUrl;
         this.newsHome.newsUrl = this.newsUrl;
         this.newsHome.story = this.story;
-        this.newsHome.source = localStorage.getItem("currentUser")
+        this.newsHome.source = localStorage.getItem('currentUser');
         this.newsService.updateNews(this.newsHome);
         window.location.reload();
 

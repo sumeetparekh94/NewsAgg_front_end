@@ -1,0 +1,109 @@
+<!--<head>-->
+<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">-->
+<!--</head>-->
+<div class="container-fluid">
+
+  <div class="row">
+    <div class="col s8 offset-s2">
+      <div class="card">
+        <div class="sm-jumbotron center-align">
+          <h2>Update Profile</h2>
+        </div>
+        <form class="col s12 white" #UserRegistrationForm="ngForm">
+          <div class="row">
+            <div class="input field col-6">
+              <input matInput type="text" name="First Name" value={{firstname}} [(ngModel)]="firstname">
+              <label>First Name</label>
+            </div>
+            <div class="input field col-6">
+              <input matInput type="text" name="Last Name" [(ngModel)]="lastname">
+              <label>Last Name</label>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="input field col-6">
+              <input matInput type="text" matInput name="Email" [(ngModel)]="email">
+              <label>Email</label>
+            </div>
+
+
+            <div class="input field col-6">
+              <input matInput type="text" name="Username" [(ngModel)]="username">
+              <label>Username</label>
+            </div>
+          </div>
+
+          <div class="row">
+
+
+            <div class="input field col-4">
+              <ul>
+                <label>Preferences
+                  <label>
+                    <li>
+                      <input type="checkbox" checked="{{isGen}}" data-md-icheck
+                             (change)="toggleVisibilityGen($event)"
+                             class="filled-in"/>
+                      <span>General</span>
+                    </li>
+                  </label>
+                  <label>
+                    <li>
+                      <input type="checkbox" checked="{{isBus}}" data-md-icheck
+                             (change)="toggleVisibilityBus($event)" class="filled-in"/>
+                      <span>Business</span>
+                    </li>
+                  </label>
+                  <label>
+                    <li>
+                      <input type="checkbox" checked="{{isEnt}}" data-md-icheck
+                             (change)="toggleVisibilityEnt($event)" class="filled-in"/>
+                      <span>Entertainment</span>
+                    </li>
+                  </label>
+                  <label>
+                    <li>
+                      <input type="checkbox" checked="{{isHea}}" data-md-icheck
+                             (change)="toggleVisibilityHea($event)" class="filled-in"/>
+                      <span>Health</span>
+                    </li>
+                  </label>
+                  <label>
+                    <li>
+                      <input type="checkbox" checked="{{isSci}}" data-md-icheck
+                             (change)="toggleVisibilitySci($event)" class="filled-in"/>
+                      <span>Science</span>
+                    </li>
+                  </label>
+                  <label>
+                    <li>
+                      <input type="checkbox" checked="{{isSpo}}" data-md-icheck
+                             (change)="toggleVisibilitySpo($event)" class="filled-in"/>
+                      <span>Sports</span>
+                    </li>
+                  </label>
+                  <label>
+                    <li>
+                      <input type="checkbox" checked="{{isTec}}" data-md-icheck
+                             (change)="toggleVisibilityTec($event)" class="filled-in"/>
+                      <span>Technology</span>
+                    </li>
+                  </label>
+
+                </label>
+              </ul>
+            </div>
+
+
+            <div class="input field col-12">
+              <button class="btn-submit" (click)="onSubmit()" type="submit">Submit</button>
+            </div>
+
+
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
