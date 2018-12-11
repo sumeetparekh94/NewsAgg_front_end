@@ -5,6 +5,7 @@ import {MatDialog, MatDialogConfig} from '@angular/material';
 import {CreateNewsComponent} from '../create-news/create-news.component';
 import {CreateUserComponent} from '../create-user/create-user.component';
 import {UpdateUserComponent} from '../update-user/update-user.component';
+import {RegistrationComponent} from '../registration/registration.component';
 
 @Component({
     selector: 'app-user-management',
@@ -63,7 +64,7 @@ export class UserManagementComponent implements OnInit {
         dialogConfig.height = 500;
         dialogConfig.width = 800;
 
-        const dialogRef = this.dialog.open(CreateUserComponent, dialogConfig);
+        const dialogRef = this.dialog.open(RegistrationComponent, dialogConfig);
         dialogRef.afterClosed().subscribe(result => {
             console.log('Dialog was closed');
             console.log(result);

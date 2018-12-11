@@ -1,28 +1,42 @@
+<app-header></app-header>
+<div class="row" style="margin: 5em 0em 0em 3em;">
+  <button class ="mat-raised-button"></button>
 
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-4">
-      <app-admin-sidebar></app-admin-sidebar>
+  <div class="col-xl-11" style="overflow-wrap: break-word;">
+    <h2 style="margin: 20px; margin-left: 0px">User Management</h2>
+
+    <div class="row">
+      <div class="col-2">User Id</div>
+      <div class="col-2">First Name</div>
+      <div class="col-2">Last Name</div>
+      <div class="col-2">Email</div>
+      <div class="col-2">Preferences</div>
+
     </div>
 
 
+    <div *ngFor="let user of userList">
+      <div class="card" style="height: 100%; width:100%; padding: 20px; margin-bottom: 20px">
+        <div class="row">
 
-    <div class="col-8">
-      <div class="row">
-        <button class="mat-raised-button" (click)="createUser()">Create a new User</button>
-      </div>
+          <div class="col-2"> {{user.id}}</div>
+          <div class="col-2">{{user.firstname}}</div>
+          <div class="col-2">{{user.lastname}}</div>
+          <div class="col-2">{{user.email}}</div>
+          <div class="col-2">{{user.preference}}</div>
 
-      <div *ngFor="let user of userList">
-
-        {{user.id}}
-        {{user.firstname}}
-        {{user.lastname}}
-        {{user.email}}
-        {{user.preference}}
-        <button (click)="deleteUser(user.id)">Delete</button>
-        <button (click)="updateUser(user.id)">Update</button>
-
+          <div class="row" style="margin-left:-1em;">
+            <div class="sm-6">
+              <button class="mat-raised-button" (click)="deleteUser(user.id)">Delete</button>
+            </div>
+            <div class="sm-6">
+              <button class="mat-raised-button" (click)="updateUser(user.id)">Update</button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+
+
   </div>
-</div>
+</div>\
