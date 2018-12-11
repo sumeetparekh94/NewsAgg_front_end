@@ -50,4 +50,14 @@ export class AdminService {
         });
 
     }
+
+    findAllContacts() {
+        return fetch('http://localhost:8080/api/findAllContact/', {
+            credentials: 'include'
+        }).then((res) => {
+            return res.json();
+        }).catch((err) => {
+            return err;
+        });
+    }
 }

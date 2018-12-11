@@ -108,6 +108,7 @@ export class RegistrationComponent implements OnInit {
         this.us.dType = 'reader';
         this.registerService.insertUser(this.us).then(() => {
             console.log(this.us);
+            window.location.reload()
         });
     }
 

@@ -1,0 +1,10 @@
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+</head>
+  <div class="container-fluid">
+  <h2>Add a comment here</h2>
+  <input matInput type="text" name="Title" [(ngModel)]="comment">
+  <label>Title</label>
+  <br>
+  <button class="mat-raised-button" (click)="onSubmit()">Submit</button>
+  </div>

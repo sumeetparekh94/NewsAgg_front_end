@@ -61,6 +61,9 @@ import { FooterComponent } from './footer/footer.component';
 import { CreateUserComponent } from './create-user/create-user.component';
 import { UpdateUserComponent } from './update-user/update-user.component';
 import { BusinessComponent } from './business/business.component';
+import { CommentComponent } from './comment/comment.component';
+import { AddCommentComponent } from './add-comment/add-comment.component';
+import { ContactManagerComponent } from './contact-manager/contact-manager.component';
 
 
 @NgModule({
@@ -104,7 +107,10 @@ import { BusinessComponent } from './business/business.component';
     FooterComponent,
     CreateUserComponent,
     UpdateUserComponent,
-    BusinessComponent
+    BusinessComponent,
+    CommentComponent,
+    AddCommentComponent,
+    ContactManagerComponent
   ],
   imports: [
     BrowserModule,

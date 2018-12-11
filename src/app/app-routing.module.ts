@@ -25,7 +25,7 @@ import {AgencyPanelComponent} from './agency-panel/agency-panel.component';
 import {AdvertiserPanelComponent} from './advertiser-panel/advertiser-panel.component';
 import {AgencyListComponent} from './agency-list/agency-list.component';
 import {CreateUserComponent} from './create-user/create-user.component';
-
+import {ContactManagerComponent} from './contact-manager/contact-manager.component';
 
 const routes: Routes = [
     {path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -50,6 +50,7 @@ const routes: Routes = [
     {path: 'admin/updateNews', component: UpdateNewsComponent},
     {path: 'news/fullStory', component: FullStoryComponent},
     {path: 'contactUs', component: ContactUsComponent},
+    {path: 'admin/contactManager', component: ContactManagerComponent},
     {path: 'entertainment', component: EntertainmentComponent},
     {path: 'admin', component: AdminComponent},
     {path: 'admin/login', component: AdminLoginComponent},

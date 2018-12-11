@@ -1,0 +1,14 @@
+<app-header></app-header>
+<div class="row" style="margin-top: 100px">
+  <div class="col-4">Name</div>
+  <div class="col-4">Message</div>
+  <div class="col-4">email</div>
+
+</div>
+<div *ngFor="let contact of contacts" class="row">
+
+  <div class="col-4">{{contact.name}}</div>
+  <div class="col-4">{{contact.message}}</div>
+  <div class="col-4">{{contact.email}}</div>
+  
+</div>

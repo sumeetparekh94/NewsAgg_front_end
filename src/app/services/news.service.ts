@@ -105,4 +105,16 @@ export class NewsService {
         });
 
     }
+
+    getComments(newsId) {
+
+        return fetch('http://localhost:8080/api/news/findComment?newsId=' + newsId, {
+            credentials: 'include'
+        }).then((msg) => {
+            return msg.json();
+        }).catch(error => {
+            console.log(error);
+        });
+
+    }
 }

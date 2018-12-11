@@ -47,6 +47,7 @@ export class UpdateNewsComponent implements OnInit {
         this.newsHome.imgUrl = this.imgUrl;
         this.newsHome.newsUrl = this.newsUrl;
         this.newsHome.story = this.story;
+        console.log(this.newsHome)
         this.newsHome.source = localStorage.getItem('currentUser');
         this.newsService.updateNews(this.newsHome);
         window.location.reload();

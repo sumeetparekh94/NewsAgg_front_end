@@ -56,7 +56,7 @@ export class AdminLoginComponent implements OnInit {
         this.loginService.checkAdmin(this.f.username.value, this.f.password.value).then(xyz => {
 
             if (xyz[0] === 'true') {
-                console.log('hello from the other side')
+                localStorage.setItem('currentUser', this.f.username.value)
                 this.router.navigate(['/admin']);
             } else {
 
