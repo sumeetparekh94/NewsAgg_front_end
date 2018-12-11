@@ -3,10 +3,11 @@ import {User} from '../User';
 
 @Injectable()
 export class UserService {
-    private us: User;
+    us: User = new User();
 
     constructor() {
     }
+
 
     findOneUser(username) {
         return fetch('https://serene-harbor-64038.herokuapp.com/api/user/findOne?username=' + username, {
@@ -30,7 +31,7 @@ export class UserService {
         this.us.password = user.password;
         this.us.preference = user.preference;
         this.us.dType = user.dType;
-        fetch('https://serene-harbor-64038.herokuapp.com/api/user/updateUser', {
+        fetch('https://serene-harbor-64038.herokuapp.com/api/user/update', {
             credentials: 'include',
             method: 'POST',
             body: JSON.stringify(this.us),
@@ -40,8 +41,7 @@ export class UserService {
 
         }).then(msg => {
 
-
-            return msg.json();
+            window.location.reload();
         }).catch(err => {
             console.log(err);
         });

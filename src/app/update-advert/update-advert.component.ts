@@ -40,7 +40,6 @@ export class UpdateAdvertComponent implements OnInit {
         this.advert.full_link = this.full_link;
         this.advert.source = localStorage.getItem('currentUser');
         this.advertService.update(this.advert);
-        window.location.reload();
     }
 
 }

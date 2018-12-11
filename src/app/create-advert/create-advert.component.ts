@@ -29,6 +29,7 @@ export class CreateAdvertComponent implements OnInit {
         this.ad.title = this.title;
         this.ad.source = localStorage.getItem('currentUser')
         this.advertService.createAdvert(this.ad);
+        window.location.reload()
 
     }
 

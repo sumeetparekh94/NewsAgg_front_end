@@ -26,6 +26,7 @@ import {AdvertiserPanelComponent} from './advertiser-panel/advertiser-panel.comp
 import {AgencyListComponent} from './agency-list/agency-list.component';
 import {CreateUserComponent} from './create-user/create-user.component';
 import {ContactManagerComponent} from './contact-manager/contact-manager.component';
+import {BusinessComponent} from './business/business.component';
 
 const routes: Routes = [
     {path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -49,6 +50,7 @@ const routes: Routes = [
     {path: 'admin/createNews', component: CreateNewsComponent},
     {path: 'admin/updateNews', component: UpdateNewsComponent},
     {path: 'news/fullStory', component: FullStoryComponent},
+    {path: 'business', component:BusinessComponent},
     {path: 'contactUs', component: ContactUsComponent},
     {path: 'admin/contactManager', component: ContactManagerComponent},
     {path: 'entertainment', component: EntertainmentComponent},

@@ -50,7 +50,6 @@ export class UpdateNewsComponent implements OnInit {
         console.log(this.newsHome)
         this.newsHome.source = localStorage.getItem('currentUser');
         this.newsService.updateNews(this.newsHome);
-        window.location.reload();
 
     }
 

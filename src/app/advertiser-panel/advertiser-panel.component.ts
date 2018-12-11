@@ -16,11 +16,11 @@ export class AdvertiserPanelComponent implements OnInit {
     advertisement: Response | void;
 
 
-    constructor(private adServie: AdvertService, public dialog: MatDialog) {
+    constructor(private adService: AdvertService, public dialog: MatDialog) {
     }
 
     ngOnInit() {
-        this.adServie.findByadvertiser(localStorage.getItem('currentUser')).then((res) => {
+        this.adService.findByadvertiser(localStorage.getItem('currentUser')).then((res) => {
             this.advertisement = res;
             console.log(res);
 
@@ -57,6 +57,12 @@ export class AdvertiserPanelComponent implements OnInit {
         dialogConfig.width = 800;
 
         const dialogRef = this.dialog.open(CreateAdvertComponent, dialogConfig);
+
+    }
+
+    deleteAd(id) {
+        this.adService.deleteAd(id);
+        
 
     }
 }

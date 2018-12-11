@@ -70,7 +70,7 @@ export class NewsService {
     }
 
     updateNews(newsHome) {
-
+        console.log(newsHome)
         fetch('https://serene-harbor-64038.herokuapp.com/api/news/update', {
             credentials: 'include',
             method: 'POST',
@@ -79,6 +79,7 @@ export class NewsService {
                 'content-type': 'application/json'
             }
         }).then(() => {
+            window.location.reload()
 
         });
 

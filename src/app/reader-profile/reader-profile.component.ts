@@ -23,15 +23,16 @@ export class ReaderProfileComponent implements OnInit {
      isBus: boolean;
 
      isEnt: boolean;
+    user: User;
 
      isTec: boolean;
-     user: User;
      prefs: string;
 
     constructor(private userService: UserService) {
     }
 
     ngOnInit() {
+        this.user = new User();
         this.userService.findOneUser(localStorage.getItem('currentUser')).then((response) => {
             this.firstname = response.firstname;
             this.lastname = response.lastname;

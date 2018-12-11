@@ -1,14 +1,16 @@
 <app-header></app-header>
 <div class="row" style="margin-top: 100px">
-  <div class="col-4">Name</div>
-  <div class="col-4">Message</div>
-  <div class="col-4">email</div>
+  <div class="col-3">Name</div>
+  <div class="col-3">Message</div>
+  <div class="col-3">email</div>
+  <div class="col-3">Action</div>
 
 </div>
 <div *ngFor="let contact of contacts" class="row">
 
-  <div class="col-4">{{contact.name}}</div>
-  <div class="col-4">{{contact.message}}</div>
-  <div class="col-4">{{contact.email}}</div>
+  <div class="col-3">{{contact.name}}</div>
+  <div class="col-3">{{contact.message}}</div>
+  <div class="col-3">{{contact.email}}</div>
+  <div class="col-3"><button class="mat-raised-button">Reply</button> </div>
 
 </div>

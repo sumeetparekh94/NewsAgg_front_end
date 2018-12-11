@@ -44,7 +44,7 @@ export class AdvertService {
     }
 
     update(advert: Advertisement) {
-        console.log(advert)
+        console.log(advert);
         fetch('https://serene-harbor-64038.herokuapp.com/api/advert/update', {
             credentials: 'include',
             method: 'POST',
@@ -54,7 +54,7 @@ export class AdvertService {
             }
 
         }).then(() => {
-
+            window.location.reload();
         }).catch(() => {
         });
 
@@ -68,6 +68,19 @@ export class AdvertService {
             return msg.json();
         }).catch(() => {
 
+        });
+    }
+
+    deleteAd(id: any) {
+        console.log(id)
+        fetch('https://serene-harbor-64038.herokuapp.com/api/advert/delete?adId=' + id, {
+
+            credentials: 'include',
+            method: 'DELETE',
+
+        }).then(() => {
+            window.location.reload();
+        }).catch(() => {
         });
     }
 }
