@@ -7,7 +7,7 @@ export class CommentService {
 
     insertComment(comment, newsId, userId) {
         console.log(comment, newsId, userId);
-        return fetch('http://localhost:8080/api/comment/insert', {
+        return fetch('https://serene-harbor-64038.herokuapp.com/api/comment/insert', {
             credentials: 'include',
             method: 'POST',
             body: JSON.stringify({'comment': comment, 'newsId': newsId, 'userId': userId}),

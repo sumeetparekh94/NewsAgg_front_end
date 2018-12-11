@@ -52,7 +52,7 @@ export class AdminService {
     }
 
     findAllContacts() {
-        return fetch('http://localhost:8080/api/findAllContact/', {
+        return fetch('https://serene-harbor-64038.herokuapp.com/api/findAllContact/', {
             credentials: 'include'
         }).then((res) => {
             return res.json();

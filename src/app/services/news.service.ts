@@ -108,7 +108,7 @@ export class NewsService {
 
     getComments(newsId) {
 
-        return fetch('http://localhost:8080/api/news/findComment?newsId=' + newsId, {
+        return fetch('https://serene-harbor-64038.herokuapp.com/api/news/findComment?newsId=' + newsId, {
             credentials: 'include'
         }).then((msg) => {
             return msg.json();
